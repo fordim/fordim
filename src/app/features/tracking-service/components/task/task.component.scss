@@ -1,0 +1,70 @@
+.wrapper {
+  display: flex;
+  width: 500px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.jira {
+  cursor: pointer;
+  background-color: #7dd2fd;
+}
+
+.other {
+  background-color: #f1ce7f;
+}
+
+.talks {
+  background-color: #57ff95;
+}
+
+.edu {
+  background-color: #c8aeff;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+}
+
+button {
+  width: 50px;
+  height: 30px;
+  margin: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 45px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 2.5px;
+}
+
+.time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 75px;
+  height: 25px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 5px;
+}

@@ -1,0 +1,12 @@
+<div class="layout" *ngIf="(activeUser$ | async)">
+  <app-layout></app-layout>
+</div>
+<div class="wrapper">
+  <div class="content" (click)="clickOnImage()" #content>
+    <img class="image" #image3 />
+    <img class="image" #image2 />
+    <img class="image" #image1 />
+  </div>
+  <div class="timer">{{ timeCounter$ | async }}</div>
+  <div class="button" (click)="stopTimer()">Stop</div>
+</div>

@@ -1,0 +1,12 @@
+<header *ngIf="(activeUser$ | async)">
+  <div class="user-block">
+    <img class="alUser" src="{{ alUser }}" alt="">
+    <img class="triangle" src="{{ triangle }}" alt="">
+    <div class="userName">{{ (activeUser$ | async)?.name }}</div>
+  </div>
+  <div class="right-block">
+    <button routerLink="admin-cabinet" *ngIf="(activeUser$ | async)?.role === 'admin'" class="button">Admin Page</button>
+    <button routerLink="" class="button" routerLinkActive="active" [routerLinkActiveOptions]="{ exact : true }">Main page</button>
+    <button routerLink="" class="button" (click)="logout()">Logout</button>
+  </div>
+</header>

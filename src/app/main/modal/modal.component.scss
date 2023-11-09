@@ -1,0 +1,56 @@
+.wrapper{
+  width: 525px;
+  height: 300px;
+  background-color: white;
+  border-radius: 20px;
+  font-family: Arial, serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal-content {
+  margin-left: 100px;
+  margin-top: 80px;
+  font-size:30px;
+  line-height: 50px;
+}
+
+.success {
+  font-size:40px;
+}
+
+.modal-button {
+  display: block;
+  width: 115px;
+  background: #00C1FF;
+  margin: 35px auto;
+  color: #FFFFFF;
+  text-align: center;
+  border-radius: 5px;
+  line-height: 40px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-button:hover{
+  background: #87CEFAFF;
+}
+
+.alLayDown {
+  position: absolute;
+  width: 190px;
+  height: 320px;
+  top: -15px;
+  left: -50px;
+}
+
+.alNice {
+  position: absolute;
+  width: 200px;
+  height: 380px;
+  top: -70px;
+  left: -40px;
+}

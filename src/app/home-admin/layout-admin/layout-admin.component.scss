@@ -1,0 +1,28 @@
+header {
+  display: flex;
+  width: 100%;
+  min-width: 1150px;
+  background: #8e98a1;
+  position: absolute;
+  justify-content: space-between;
+  font-family: Arial, serif;
+  z-index: 4;
+}
+
+.button {
+  width: 100px;
+  background: #ffffff;
+  margin: 10px;
+  color: black;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 20px;
+  border: none;
+  line-height: 35px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #87cefaff;
+}

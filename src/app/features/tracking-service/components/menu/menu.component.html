@@ -1,0 +1,44 @@
+<div class="wrapper">
+  <div class="action">
+    <div class="title-block">Add new task</div>
+    <form class="form" #form="ngForm" (ngSubmit)="addNewTask(form)" novalidate>
+      <div class="field">
+        <label>Task name: </label>
+        <input
+          type="text"
+          name="name"
+          ngModel
+          maxlength="25"
+          minlength="3"
+          required
+        />
+      </div>
+      <div class="tags">
+        <div class="title-tags">Tags:</div>
+        <div class="radio-field">
+          <div class="field">
+            <p class="jira tag">Jira</p>
+            <input type="radio" name="tag" ngModel value="jira" required />
+          </div>
+          <div class="field">
+            <p class="talks tag">Talks</p>
+            <input type="radio" name="tag" ngModel value="talks" required />
+          </div>
+          <div class="field">
+            <p class="other tag">Other</p>
+            <input type="radio" name="tag" ngModel value="other" required />
+          </div>
+          <div class="field">
+            <p class="edu tag">Edu</p>
+            <input type="radio" name="tag" ngModel value="edu" required />
+          </div>
+        </div>
+      </div>
+      <button class="button">Submit</button>
+    </form>
+  </div>
+  <div class="links">
+    <button class="button-link" (click)="openBoard()">Board</button>
+    <button class="button-link" (click)="openCalendar()">Calendar</button>
+  </div>
+</div>

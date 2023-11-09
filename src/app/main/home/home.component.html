@@ -1,0 +1,23 @@
+<div class="root">
+  <div class="wrapperModal" *ngIf="(modal$ | async)">
+    <div class="modal">
+      <app-modal
+        [type]="(modalType$ | async)"
+        [contentText]="(contentTextEvent$ | async)"
+        [buttonText]="(buttonTextEvent$ | async)"
+      ></app-modal>
+    </div>
+  </div>
+  <div class="wrapperLayout" *ngIf="(isLogInSuccess$ | async)">
+    <app-layout></app-layout>
+  </div>
+  <body>
+    <div class="wrapperAuth" *ngIf="!(isLogInSuccess$ | async)">
+      <app-auth></app-auth>
+    </div>
+    <div class="wrapperCabinet" *ngIf="(isLogInSuccess$ | async)">
+      <app-cabinet></app-cabinet>
+    </div>
+  </body>
+</div>
+

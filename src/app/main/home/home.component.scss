@@ -1,0 +1,23 @@
+.root {
+  width: 100%;
+  height: 100vh;
+  background: #FFF4C5;
+}
+
+.wrapperLayout {
+  padding-bottom: 55px;
+}
+
+.wrapperModal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+
+.modal {
+  position: relative;
+}

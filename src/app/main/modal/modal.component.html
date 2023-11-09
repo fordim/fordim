@@ -1,0 +1,9 @@
+<div class="wrapper">
+  <img class="alLayDown" src="{{ alThinking }}" alt="" *ngIf="type === 'error'">
+  <img class="alNice" src="{{ alNice }}" alt="" *ngIf="type === 'success'">
+  <div class="modal-content" [class.success]="type === 'success'">
+    <p>{{ contentText }}</p>
+    <button class="modal-button" (click)="submit()">{{ buttonText }}</button>
+  </div>
+</div>
+

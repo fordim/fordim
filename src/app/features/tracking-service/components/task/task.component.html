@@ -1,0 +1,16 @@
+<div class="wrapper">
+  <div class="body">
+    <div
+      class="name"
+      [class.jira]="tagType === 'jira'"
+      [class.talks]="tagType === 'talks'"
+      [class.other]="tagType === 'other'"
+      [class.edu]="tagType === 'edu'"
+      (click)="getToURL()"
+    >
+      {{ taskName }}
+    </div>
+    <button (click)="actionClicked()">{{ buttonAction }}</button>
+    <div class="time">{{ timeCounter$ | async }}</div>
+  </div>
+</div>

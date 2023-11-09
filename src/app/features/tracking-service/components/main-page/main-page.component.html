@@ -1,0 +1,18 @@
+<div class="layout">
+  <app-layout-admin></app-layout-admin>
+</div>
+<div class="root">
+  <div class="menu">
+    <tracking-service-menu></tracking-service-menu>
+  </div>
+  <div class="tasks">
+    <div *ngFor="let task of tasks">
+      <app-task
+        [taskName]="task.name"
+        [taskTimeStart]="task.time"
+        [tagType]="task.tagType"
+        (action)="actionClicked($event)"
+      ></app-task>
+    </div>
+  </div>
+</div>
