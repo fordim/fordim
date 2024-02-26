@@ -1,0 +1,13 @@
+<div class="wrapper">
+  <h2 class="month-name">{{ monthName }}</h2>
+  <div class="days-of-week">
+    <div *ngFor="let dayOfWeek of daysOfWeek" class="day-of-week">{{ dayOfWeek }}</div>
+  </div>
+  <div class="month">
+    <div *ngFor="let day of days$" class="day" (click)="openDay()">
+      <calendar-day
+        [day]="day"
+      ></calendar-day>
+    </div>
+  </div>
+</div>

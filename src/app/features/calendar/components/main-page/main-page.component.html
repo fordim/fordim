@@ -1,0 +1,11 @@
+<div class="layout">
+  <app-layout-admin></app-layout-admin>
+</div>
+<div class="wrapper">
+  <div class="modal" *ngIf="(hasDayOpenModal$ | async)">
+    <calendar-day-open-modal></calendar-day-open-modal>
+  </div>
+  <body [class.ban-body]="(hasDayOpenModal$ | async)">
+    <calendar-board></calendar-board>
+  </body>
+</div>

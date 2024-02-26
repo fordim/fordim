@@ -28,6 +28,10 @@ export class LayoutAdminComponent {
     this._router.navigateByUrl('admin-cabinet/balloon').then((r) => {});
   }
 
+  public calendarPage() {
+    this._router.navigateByUrl('admin-cabinet/calendar').then((r) => {});
+  }
+
   public trackingPage() {
     this._router.navigateByUrl('admin-cabinet/tracking').then((r) => {});
   }

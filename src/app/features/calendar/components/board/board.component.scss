@@ -1,0 +1,29 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  background-color: cornflowerblue;
+  width: 800px;
+  border: 2px solid blue;
+  border-radius: 10px;
+}
+
+.month-name {
+  color: #11113b;
+}
+
+.month {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.days-of-week {
+  display: flex;
+  width: 800px;
+  margin-left: 100px;
+}
+
+.day-of-week {
+  margin-right: 93px;
+}
