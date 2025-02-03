@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DateService } from "../../services/date.service";
 import { BoardService } from "../../services/board.service";
-import { DAYS_OF_WEEK } from "../../constants/consts";
+import { DAYS_OF_WEEK, DayType } from "../../constants/consts";
+import { Day } from "../../constants/interface";
 
 @Component({
   selector: 'calendar-board',
@@ -29,7 +30,12 @@ export class BoardComponent implements OnInit {
     // console.log(or.getDay())
   }
 
-  public openDay(): void {
+  public openDay(day: Day): void {
+    if (day.type === DayType.blocked) {
+      return;
+    }
+
+    this._date.setSelectedDay(day);
     this._board.openDayModal();
   }
 }

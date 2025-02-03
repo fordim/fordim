@@ -14,6 +14,8 @@ export class DateService {
   firstDayOfMonth: Date;
   dates$: Day[] = [];
 
+  selectedDay: Day|null = null;
+
   constructor() {
     this.data = new Date();
     // this.data = new Date(2024, 4, 3);
@@ -33,5 +35,9 @@ export class DateService {
     for (let i = 1; i <= this.lastDayOfMonth.getDate(); i++) {
       this.dates$.push({type: DayType.active, number: i} as Day);
     }
+  }
+
+  setSelectedDay(day: Day): void {
+    this.selectedDay = day;
   }
 }

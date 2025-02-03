@@ -4,7 +4,7 @@
     <div *ngFor="let dayOfWeek of daysOfWeek" class="day-of-week">{{ dayOfWeek }}</div>
   </div>
   <div class="month">
-    <div *ngFor="let day of days$" class="day" (click)="openDay()">
+    <div *ngFor="let day of days$" class="day" (click)="openDay(day)">
       <calendar-day
         [day]="day"
       ></calendar-day>

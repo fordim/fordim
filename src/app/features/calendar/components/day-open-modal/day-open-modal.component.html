@@ -1,6 +1,12 @@
 <div class="wrapper">
   <img class="closeIcon" src="{{ closeIcon }}" alt="" (click)="closeModal()">
   <div class="content">
-    TEST
+    <h1>{{ day?.number }} день</h1>
+    <div class="actions">
+      <div *ngFor="let action of actions$" class="action">
+        <div>{{ translateName(action.name) }}</div>
+        <div class="checkbox" [class.-completed]="action.isCompleted" (click)="changeActionInfo(action.name)"></div>
+      </div>
+    </div>
   </div>
 </div>
