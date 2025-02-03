@@ -107,7 +107,6 @@
       }
     }
   },
-  "defaultProject": "fordim",
   "cli": {
     "analytics": false
   }
