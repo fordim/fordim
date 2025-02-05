@@ -25,7 +25,7 @@ const routes: Routes = [
   {path: 'admin-cabinet/tracking', component: MainPageTrackingServiceComponent},
   {path: 'admin-cabinet/balloon', component: FlyingBalloonComponent},
   {path: 'admin-cabinet/calendar', component: CalendarMainPageComponent},
-  {path: 'wedding/formos', component: WeddingMainPageComponent},
+  {path: 'wedding/anastasia&vadim', component: WeddingMainPageComponent},
 ];
 
 @NgModule({

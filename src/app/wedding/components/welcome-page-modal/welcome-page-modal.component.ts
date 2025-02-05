@@ -28,7 +28,8 @@ export class WelcomePageModalComponent {
   }
 
   playMusic() {
-    const audio = new Audio('assets/music/dancing.mp3');
-    audio.play();
+    const audio = new Audio('assets/wedding/music/dancing.mp3');
+    audio.loop = true;
+    audio.play().catch(err => console.error('Ошибка воспроизведения:', err));
   }
 }

@@ -8,8 +8,13 @@ import { PageService } from "../../service/page.service";
 })
 export class WeddingMainPageComponent {
   hasWelcomeModal$ = this._page.hasWelcomeModal$;
+  isImagesLoaded$ = this._page.isImagesLoaded$;
 
   constructor(private _page: PageService) { }
+
+  ngOnInit(): void {
+    this._page.loadResources();
+  }
 
   openMapMarriageRegistry(): void {
     window.open('https://yandex.ru/maps/-/CHeHZJ1e', '_blank');

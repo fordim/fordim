@@ -1,12 +1,17 @@
 <div class="root">
-  <div class="modal" *ngIf="(hasWelcomeModal$ | async)">
-    <wedding-welcome-page-modal></wedding-welcome-page-modal>
+  <div class="loading" *ngIf="!(isImagesLoaded$ | async)">
+    <div class="loader"></div>
   </div>
-  <div class="main">
-    <div class="page first"></div>
-    <div class="page second">
-      <div class="button one" (click)="openMapMarriageRegistry()">Показать на карте</div>
-      <div class="button two" (click)="openMapRestaurant()">Показать на карте</div>
+  <div class="content" *ngIf="(isImagesLoaded$ | async)">
+    <div class="modal" *ngIf="(hasWelcomeModal$ | async)">
+      <wedding-welcome-page-modal></wedding-welcome-page-modal>
+    </div>
+    <div class="main">
+      <div class="page first"></div>
+      <div class="page second">
+        <div class="button one" (click)="openMapMarriageRegistry()">Показать на карте</div>
+        <div class="button two" (click)="openMapRestaurant()">Показать на карте</div>
+      </div>
     </div>
   </div>
 </div>
