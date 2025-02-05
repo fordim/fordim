@@ -9,7 +9,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #fffbfb;
+  background-color: #f7f6f2;
 }
 
 .page {
@@ -28,4 +28,25 @@
 
 .second {
   background-image: url('../../../../assets/wedding/images/page-two.png');
+}
+
+.button {
+  background-color: #3f473f;
+  width: 120px;
+  padding: 7px 0 7px 0 ;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  font-size: 9px;
+  margin-left: 190px;
+  letter-spacing: 1px;
+}
+
+.one {
+  margin-top: 382px;
+}
+
+.two {
+  margin-top: 120px;
 }

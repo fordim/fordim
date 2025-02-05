@@ -9,7 +9,6 @@ import { delay } from "rxjs";
   styleUrl: './welcome-page-modal.component.scss'
 })
 export class WelcomePageModalComponent {
-
   constructor(private _page: PageService) { }
 
   closeModal(): void {
@@ -24,5 +23,12 @@ export class WelcomePageModalComponent {
     })
       .pipe(delay(100))
       .subscribe(() => {});
+
+    this.playMusic();
+  }
+
+  playMusic() {
+    const audio = new Audio('assets/music/dancing.mp3');
+    audio.play();
   }
 }
