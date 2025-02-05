@@ -28,6 +28,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 600px) {
+    width: 330px;
+    height: 500px;
+    background-image: url('../../../../assets/wedding/images/page-welcome-mobile.png');
+  }
 }
 
 .button {
@@ -40,4 +46,13 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   color: white;
   cursor: pointer;
+
+  @media screen and (max-width: 600px) {
+    margin-top: 0;
+    width: 110px;
+    padding: 8px;
+    border-radius: 12px;
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
 }
