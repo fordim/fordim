@@ -11,6 +11,7 @@ import { FlyingBalloonComponent } from "./home-admin/balloon/flying-balloon.comp
 import { CabinetAdminComponent } from "./home-admin/cabinet-admin/cabinet-admin.component";
 import { MainPageTrackingServiceComponent } from "./features/tracking-service/components/main-page/main-page.component";
 import { CalendarMainPageComponent } from "./features/calendar/components/main-page/main-page.component";
+import { WeddingMainPageComponent } from "./wedding/components/main-page/main-page.component";
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -24,6 +25,7 @@ const routes: Routes = [
   {path: 'admin-cabinet/tracking', component: MainPageTrackingServiceComponent},
   {path: 'admin-cabinet/balloon', component: FlyingBalloonComponent},
   {path: 'admin-cabinet/calendar', component: CalendarMainPageComponent},
+  {path: 'wedding/formos', component: WeddingMainPageComponent},
 ];
 
 @NgModule({

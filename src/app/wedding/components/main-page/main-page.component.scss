@@ -1,0 +1,31 @@
+.root {
+  font-family: 'Lovelace', sans-serif;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fffbfb;
+}
+
+.page {
+  width: 560px;
+  height: 800px;
+  background-size: cover;
+  background-position: center;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.first {
+  background-image: url('../../../../assets/wedding/images/page-one.png');
+}
+
+.second {
+  background-image: url('../../../../assets/wedding/images/page-two.png');
+}

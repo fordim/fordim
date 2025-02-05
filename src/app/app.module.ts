@@ -12,6 +12,7 @@ import { NewYearMathModule } from "./new-year-math/new-year-math.module";
 import { ZoomedInImageModule } from "./zoomed-in-image/zoomed-in-image.module";
 import { HomeAdminModule } from "./home-admin/home-admin.module";
 import { FeaturesModule } from "./features/features.module";
+import { WeddingModule } from "./wedding/wedding.module";
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { FeaturesModule } from "./features/features.module";
     ZoomedInImageModule,
     HomeAdminModule,
     FeaturesModule,
+    WeddingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,9 @@
+<div class="root">
+  <div class="modal" *ngIf="(hasWelcomeModal$ | async)">
+    <wedding-welcome-page-modal></wedding-welcome-page-modal>
+  </div>
+  <div class="main">
+    <div class="page first"></div>
+    <div class="page second"></div>
+  </div>
+</div>
