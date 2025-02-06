@@ -1,5 +1,7 @@
 import { Injectable, Renderer2, RendererFactory2 } from '@angular/core';
 import { BehaviorSubject } from "rxjs";
+import { Router } from "@angular/router";
+import * as Constants from "../constants/consts";
 
 @Injectable({
   providedIn: 'root'
@@ -7,24 +9,67 @@ import { BehaviorSubject } from "rxjs";
 export class PageService {
   private renderer: Renderer2;
 
-  private imageUrls = [
+  private defaultImageUrls = [
     'assets/wedding/images/page-one.png',
-    'assets/wedding/images/page-two.png',
     'assets/wedding/images/page-welcome.png',
     'assets/wedding/images/page-welcome-mobile.png',
   ];
-  private audioUrls = ['assets/wedding/music/dancing.mp3'];
+
+  backgroundImageUrl$ = new BehaviorSubject<string>('');
 
   hasWelcomeModal$ = new BehaviorSubject<boolean>(true);
   isImagesLoaded$ = new BehaviorSubject<boolean>(false);
 
-  constructor(rendererFactory: RendererFactory2) {
+  constructor(rendererFactory: RendererFactory2, private router: Router) {
     this.renderer = rendererFactory.createRenderer(null, null);
     this.lockScroll()
   }
 
-  public loadResources(): void {
-    this.loadAllAssets([...this.imageUrls])
+  public initialization(): void {
+    this.router.events.subscribe(() => {
+      const fullUrl = this.router.url;
+
+      if (fullUrl.includes(Constants.ANASTASIA_VADIM)) {
+        this.addPageTwoAndReturnIt(Constants.ANASTASIA_VADIM);
+
+      } else if (fullUrl.includes(Constants.ALYONA_RUSLAN)) {
+        this.addPageTwoAndReturnIt(Constants.ALYONA_RUSLAN);
+
+      } else if (fullUrl.includes(Constants.ANDREY_DARIA)) {
+        this.addPageTwoAndReturnIt(Constants.ANDREY_DARIA);
+
+      } else if (fullUrl.includes(Constants.VLADISLAV)) {
+        this.addPageTwoAndReturnIt(Constants.VLADISLAV);
+
+      } else if (fullUrl.includes(Constants.EVGENIIA)) {
+        this.addPageTwoAndReturnIt(Constants.EVGENIIA);
+
+      } else if (fullUrl.includes(Constants.EKATERINA)) {
+        this.addPageTwoAndReturnIt(Constants.EKATERINA);
+
+      } else if (fullUrl.includes(Constants.IRINA_VALERII)) {
+        this.addPageTwoAndReturnIt(Constants.IRINA_VALERII);
+
+      } else if (fullUrl.includes(Constants.MAMED)) {
+        this.addPageTwoAndReturnIt(Constants.MAMED);
+
+      } else if (fullUrl.includes(Constants.MARINA_YURA)) {
+        this.addPageTwoAndReturnIt(Constants.MARINA_YURA);
+      }
+
+      this.loadResources();
+    });
+  }
+
+  private addPageTwoAndReturnIt(names: string): void
+  {
+    let pageTwo = Constants.pageTwoMap[names];
+    this.backgroundImageUrl$.next(Constants.pageTwoMap[names]);
+    this.defaultImageUrls = [...this.defaultImageUrls, pageTwo];
+  }
+
+  private loadResources(): void {
+    this.loadAllAssets([...this.defaultImageUrls])
       .then(() => {
         console.log('Все ресурсы загружены');
         this.isImagesLoaded$.next(true);
@@ -66,11 +111,11 @@ export class PageService {
     this.unlockScroll()
   }
 
-  lockScroll(): void {
+  public lockScroll(): void {
     this.renderer.setStyle(document.body, 'overflow', 'hidden');
   }
 
-  unlockScroll(): void {
+  public unlockScroll(): void {
     this.renderer.removeStyle(document.body, 'overflow');
   }
 }

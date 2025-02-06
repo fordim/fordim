@@ -25,7 +25,16 @@ const routes: Routes = [
   {path: 'admin-cabinet/tracking', component: MainPageTrackingServiceComponent},
   {path: 'admin-cabinet/balloon', component: FlyingBalloonComponent},
   {path: 'admin-cabinet/calendar', component: CalendarMainPageComponent},
-  {path: 'wedding/anastasia&vadim', component: WeddingMainPageComponent},
+
+  {path: 'wedding/anastasia&vadim', component: WeddingMainPageComponent, pathMatch: 'full' },
+  {path: 'wedding/alyona&ruslan', component: WeddingMainPageComponent},
+  {path: 'wedding/andrey&daria', component: WeddingMainPageComponent},
+  {path: 'wedding/vladislav', component: WeddingMainPageComponent},
+  {path: 'wedding/evgeniia', component: WeddingMainPageComponent},
+  {path: 'wedding/ekaterina', component: WeddingMainPageComponent},
+  {path: 'wedding/irina&valerii', component: WeddingMainPageComponent},
+  {path: 'wedding/mamed', component: WeddingMainPageComponent},
+  {path: 'wedding/marina&yura', component: WeddingMainPageComponent},
 ];
 
 @NgModule({
@@ -34,3 +43,14 @@ const routes: Routes = [
 })
 export class AppRoutingModule {
 }
+
+
+// https://fordim.ru/wedding/anastasia&vadim
+// https://fordim.ru/wedding/alyona&ruslan
+// https://fordim.ru/wedding/andrey&daria
+// https://fordim.ru/wedding/vladislav
+// https://fordim.ru/wedding/evgeniia
+// https://fordim.ru/wedding/ekaterina
+// https://fordim.ru/wedding/irina&valerii
+// https://fordim.ru/wedding/mamed
+// https://fordim.ru/wedding/marina&yura

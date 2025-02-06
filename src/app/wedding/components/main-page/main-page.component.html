@@ -8,7 +8,7 @@
     </div>
     <div class="main">
       <div class="page first"></div>
-      <div class="page second">
+      <div class="page second" [ngStyle]="{ 'background-image': 'url(' + (backgroundImageUrl$ | async) + ')' }">
         <div class="button one" (click)="openMapMarriageRegistry()">Показать на карте</div>
         <div class="button two" (click)="openMapRestaurant()">Показать на карте</div>
       </div>

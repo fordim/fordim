@@ -9,11 +9,12 @@ import { PageService } from "../../service/page.service";
 export class WeddingMainPageComponent {
   hasWelcomeModal$ = this._page.hasWelcomeModal$;
   isImagesLoaded$ = this._page.isImagesLoaded$;
+  backgroundImageUrl$ = this._page.backgroundImageUrl$
 
   constructor(private _page: PageService) { }
 
   ngOnInit(): void {
-    this._page.loadResources();
+    this._page.initialization();
   }
 
   openMapMarriageRegistry(): void {
